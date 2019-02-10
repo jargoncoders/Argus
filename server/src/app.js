@@ -3,9 +3,9 @@ var express 	= require('express'),
 	cors 		    = require('cors'),
 	morgan		  = require('morgan'),
 	{sequelize}	= require('./models'),
-  config      = require('./config/config'),
+	config      = require('./config/config'),
 	app 		    = express(),
-  routes      = require('./routes');
+	routes      = require('./routes');
 
 app.use(morgan('combined'))
 app.use(bodyParser.json())
@@ -14,8 +14,8 @@ app.use('/', routes)
 
 sequelize.sync({force: false})
 	.then(() => {
-    app.listen(config.port)
-      console.log(`Backend server started at: ${config.port}`);
+  	app.listen(config.port)
+  	console.log(`Backend server started at: ${config.port}`);
   })
 
 //to clear the database for every run
