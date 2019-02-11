@@ -2,10 +2,10 @@
   "name": "argus",
   "version": "1.0.0",
   "description": "A full stack web app to manage project approvals in colleges.",
-  "main": "app.js",
+  "main": "server/app.js",
   "scripts": {
     "server-install": "npm install --prefix server",
-    "start": "node app.js --prefix server",
+    "start": "npm start --prefix server",
     "server": "npm start --prefix server",
     "heroku-prebuild": "npm install --prefix server"
   },
