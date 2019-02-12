@@ -42,13 +42,13 @@ router.post("/sreset", StudentAuthController.reset)
 
 //Students
 
-router.get("/students", TeachersController.index)
+router.get("/students", StudentsController.index)
 
-router.get("/students/:studentId", TeachersController.show)
+router.get("/students/:studentId", StudentsController.show)
 
-router.put("/students/:studentId", TeachersController.put)
+router.put("/students/:studentId", StudentsController.put)
 
-router.delete("/students/:studentId", TeachersController.delete)
+router.delete("/students/:studentId", StudentsController.delete)
 
 //Teacher Authentication
 
@@ -66,13 +66,14 @@ router.post("/treset", TeacherAuthController.reset)
 
 //Teachers
 
-router.get("/students", StudentsController.index)
 
-router.get("/students/:studentId", StudentsController.show)
+router.get("/teachers", TeachersController.index)
 
-router.put("/students/:studentId", StudentsController.put)
+router.get("/teachers/:teacherId", TeachersController.show)
 
-router.delete("/students/:studentId", StudentsController.delete)
+router.put("/teachers/:teacherId", TeachersController.put)
+
+router.delete("/teachers/:teacherId", TeachersController.delete)
 
 
 //Rocks
