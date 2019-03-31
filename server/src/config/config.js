@@ -1,5 +1,5 @@
 module.exports = {
-	port: 8081,
+	port: process.env.PORT || 8081,
 	db: {
     database: process.env.DB_NAME || 'argus',
     user: process.env.DB_USER || 'argus',
