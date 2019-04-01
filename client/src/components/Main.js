@@ -1,7 +1,11 @@
 import React from 'react';
+import ButtonAppBar from './ButtonAppBar'
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-// import HomePage from './homePage';
+// import HomeComponent from './components/HomeComponent';
+import LoginComponent from './LoginComponent';
+import AddProjectComponent from './AddProjectComponent';
+import HorizontalLinearStepper from './ViewProjectComponent'
 // import RestaurantPage from './restaurantPage';
 // import AboutMe from './aboutme';
 // import Contact from './contact';
@@ -11,10 +15,13 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 const Main = () => (
   <BrowserRouter>
+    <ButtonAppBar />
     <Switch>
-      {/* <Route exact path="/" component={HomePage} />
-      <Route path="/restaurant/:id" component={RestaurantPage} />
-      <Route path="/contact" component={Contact} />
+      {/* <Route exact path="/" component={HomeComponent} /> */}
+      <Route path="/login" component={LoginComponent} />
+      <Route path="/addProject" component={AddProjectComponent} />
+      <Route path="/viewProject" component={HorizontalLinearStepper} />
+      {/* <Route path="/contact" component={Contact} />
       <Route path="/projects" component={Projects} />
       <Route path="/resume" component={Resume} /> */}
     </Switch>
