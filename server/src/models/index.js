@@ -26,16 +26,8 @@ db.sequelize = sequelize
 db.Sequelize = Sequelize
 
 //Associations
-// db.User.hasMany(db.Order)
-// db.User.hasMany(db.Service)
-
-// db.Rock.belongsToMany(db.Order, {through: 'RockOrder'})
-// db.Order.belongsToMany(db.Rock, {through: 'RockOrder'})
-
-// db.Plant.belongsToMany(db.Order, {through: 'PlantOrder'})
-// db.Order.belongsToMany(db.Plant, {through: 'PlantOrder'})
-
-// db.Fish.belongsToMany(db.Order, {through: 'FishOrder'})
+// db.Project.hasMany(db.Student)
+// db.Teacher.belongsToMany(db.Project, {through: 'ProjectTeacher'});
 // db.Order.belongsToMany(db.Fish, {through: 'FishOrder'})
 
 module.exports = db

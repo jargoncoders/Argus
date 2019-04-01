@@ -6,6 +6,7 @@ module.exports = {
       const students = await Student.findAll({
         limit: 10
       })
+      console.log(students)
       res.send(students)
     } catch (err) {
       return res.status(500).send({
